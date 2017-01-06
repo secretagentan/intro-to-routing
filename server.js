@@ -16,12 +16,12 @@ var port = 3000;
 
 var routes = [
   { method: 'GET', path: '/', content: 'Hello & Welcome'},
-  { method: 'GET', path: '/kittens', content: 'meow'},
-  { method: 'GET', path: '/randomNumber', content: '________'},
-  { method: 'GET', path: '/eightball', content: '________'},
-  { method: 'GET', path: '/greet/[name]', content: 'Hello ' + name + '!'},
-  { method: 'GET', path: '/coinToss', content: '________'},
-  { method: 'GET', path: '/visit?destination=paris', content: '________'},
+  { method: 'GET', path: '/kittens', content: 'meow'}
+  // { method: 'GET', path: '/randomNumber', content: '________'},
+  // { method: 'GET', path: '/eightball', content: '________'},
+  // { method: 'GET', path: '/greet/[name]', content: 'Hello ' + name + '!'},
+  // { method: 'GET', path: '/coinToss', content: '________'},
+  // { method: 'GET', path: '/visit?destination=paris', content: '________'},
 ];
 
 var server = http.createServer(function(request, response) {
@@ -38,7 +38,6 @@ var server = http.createServer(function(request, response) {
     response.end();
   } else {
     response.statusCode = 404;
-    // response.setHeader('Content-Type', 'text/plain');
     response.write('uhoh');
     response.end();
   }
