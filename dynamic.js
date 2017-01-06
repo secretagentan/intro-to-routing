@@ -12,7 +12,6 @@ var routes = [
   { method: 'GET', path: '/coinToss', content: coinToss}
 ];
 
-
 var server = http.createServer(function(request, response) {
   var method = request.method;
   var url = request.url;
@@ -59,7 +58,7 @@ function coinToss() {
   var i = Math.floor(Math.random() * coin.length);
   var side = coin[i];
   return side;
-}
+};
 
 server.listen(port, hostname, function(){
   console.log('Server running at http://' + hostname + ':' + port);
