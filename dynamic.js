@@ -8,7 +8,8 @@ var routes = [
   { method: 'GET', path: '/', content: hello},
   { method: 'GET', path: '/kittens', content: meow},
   { method: 'GET', path: '/randomNumber', content: random},
-  { method: 'GET', path: '/eightball', content: shake}
+  { method: 'GET', path: '/eightball', content: shake},
+  { method: 'GET', path: '/coinToss', content: coinToss}
 ];
 
 
@@ -52,6 +53,13 @@ function shake() {
   console.log(message);
   return message;
 };
+
+function coinToss() {
+  var coin = ["heads", "tails"];
+  var i = Math.floor(Math.random() * coin.length);
+  var side = coin[i];
+  return side;
+}
 
 server.listen(port, hostname, function(){
   console.log('Server running at http://' + hostname + ':' + port);
